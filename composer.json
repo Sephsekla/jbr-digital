@@ -13,6 +13,7 @@
     },
     "scripts": { 
         "up": "docker-compose up -d",
-        "down": "docker-compose stop"
+        "down": "docker-compose stop",
+        "wp": "docker-compose run wpcli"
     }
 }

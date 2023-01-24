@@ -23,12 +23,7 @@
 
 	<!-- Use the Human Made coding standards. -->
 	<rule ref="HM">
-		<!-- Exclude third-party plugins. -->
-		<exclude-pattern>/content/plugins/gravityforms/</exclude-pattern>
-		<exclude-pattern>/content/plugins/multilingualpress/</exclude-pattern>
-		<exclude-pattern>/content/plugins/public-post-preview/</exclude-pattern>
-		<exclude-pattern>/content/plugins/user-switching/</exclude-pattern>
-
+	
 		<!-- Don't restrict namespaced functions to `namespace.php`. -->
 		<exclude name="HM.Files.FunctionFileName.WrongFile" />
 

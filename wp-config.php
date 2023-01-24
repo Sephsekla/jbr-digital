@@ -14,6 +14,8 @@
  * * ABSPATH
  */
 
+require_once __DIR__ . '/vendor/autoload.php';
+
 if ( is_readable( './.config/production.php' ) ) {
 	require_once( '/.config/production.php ' );
 } else {
@@ -22,7 +24,7 @@ if ( is_readable( './.config/production.php' ) ) {
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+	define( 'ABSPATH', __DIR__ . '/wordpress/' );
 }
 
 /** Sets up WordPress vars and included files. */

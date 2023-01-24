@@ -27,5 +27,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/wordpress/' );
 }
 
+if ( ! defined( 'WP_CONTENT_DIR' ) ) {
+	define( 'WP_CONTENT_DIR', __DIR__ . '/content' );
+}
+
+if ( ! defined( 'WP_CONTENT_URL' ) ) {
+	$protocol = ! empty( $_SERVER['HTTPS'] ) ? 'https' : 'http';
+	define( 'WP_CONTENT_URL', $protocol . '://' . $_SERVER['HTTP_HOST'] . '/content' );
+}
+
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';

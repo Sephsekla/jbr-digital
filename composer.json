@@ -13,7 +13,7 @@
 	"scripts": {
 		"up": "docker-compose up -d",
 		"down": "docker-compose stop",
-		"wp": "docker-compose run wpcli"
+		"wp": "docker-compose run -rm wpcli"
 	},
 	"require-dev": {
 		"humanmade/coding-standards": "^1.2",

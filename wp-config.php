@@ -16,10 +16,10 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-if ( is_readable( './.config/production.php' ) ) {
-	require_once( '/.config/production.php ' );
+if ( is_readable( __DIR__ . './.config/production.php' ) ) {
+	require_once( __DIR__ . '/.config/production.php ' );
 } else {
-	require_once( './.config/local.php' );
+	require_once( __DIR__ . '/.config/local.php' );
 }
 
 if ( ! defined( 'JBR_IS_LOCAL' ) ) {
@@ -28,7 +28,7 @@ if ( ! defined( 'JBR_IS_LOCAL' ) ) {
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/wordpress/' );
+	define( 'ABSPATH', __DIR__ );
 }
 
 if ( ! defined( 'WP_CONTENT_DIR' ) ) {

@@ -9,11 +9,17 @@
             "email": "dev@jbr.digital"
         }
     ],
-    "require": {
-    },
     "scripts": { 
         "up": "docker-compose up -d",
         "down": "docker-compose stop",
         "wp": "docker-compose run wpcli"
+    },
+    "require-dev": {
+        "humanmade/coding-standards": "^1.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

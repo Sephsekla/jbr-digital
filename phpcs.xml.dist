@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<ruleset name="jbr-digital">
+	<description>PHP Coding Standards for Standard Chartered Non-Retail</description>
+
+	<config name="php_version" value="80000" />
+	<config name="testVersion" value="8.0-" />
+
+	<!-- Show sniff codes in all reports. -->
+	<arg value="s" />
+
+	<!-- Check PHP files only. -->
+	<arg name="extensions" value="php" />
+
+	<!-- Exclude external libraries and builds. -->
+	<exclude-pattern>*/build/</exclude-pattern>
+	<exclude-pattern>*/dist/</exclude-pattern>
+	<exclude-pattern>*/lib/</exclude-pattern>
+	<exclude-pattern>*/node_modules/</exclude-pattern>
+	<exclude-pattern>/vendor/</exclude-pattern>
+
+	<!-- Check for PHP cross-version compatibility. -->
+	<rule ref="PHPCompatibilityWP" />
+
+	<!-- Use the Human Made coding standards. -->
+	<rule ref="HM">
+		<!-- Exclude third-party plugins. -->
+		<exclude-pattern>/content/plugins/gravityforms/</exclude-pattern>
+		<exclude-pattern>/content/plugins/multilingualpress/</exclude-pattern>
+		<exclude-pattern>/content/plugins/public-post-preview/</exclude-pattern>
+		<exclude-pattern>/content/plugins/user-switching/</exclude-pattern>
+
+		<!-- Don't restrict namespaced functions to `namespace.php`. -->
+		<exclude name="HM.Files.FunctionFileName.WrongFile" />
+
+		<!-- Ignore directory naming rules that turn namespace Foo_Bar into directory foo_bar. -->
+		<exclude name="HM.Files.NamespaceDirectoryName" />
+
+		<!-- This faulty sniff has been removed in the most recent PSR2R standard, but it is still included in the HM one -->
+		<exclude name="PSR2R.Namespaces.UseInAlphabeticalOrder.Order" />
+
+		<!-- Ignore "misspelled" references to "WordPress". -->
+		<exclude name="WordPress.WP.CapitalPDangit.Misspelled" />
+	</rule>
+	
+
+	<!-- Allow for config files to declare symbols, as well as execute logic with side effects. -->
+	<rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+		<exclude-pattern>/.config/</exclude-pattern>
+	</rule>
+
+	<rule ref="Generic.Files.LineEndings">
+		<properties>
+			<property name="eolChar" value="\n"/>
+		</properties>
+	</rule>
+</ruleset>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d8c9221f08ded313801852cb5820947",
+    "content-hash": "78a504761dc2e0fa7868460d4ce6fa75",
     "packages": [
         {
             "name": "composer/installers",
@@ -548,6 +548,75 @@
                 "source": "https://github.com/humanmade/coding-standards/tree/v1.2.1"
             },
             "time": "2022-09-14T09:35:02+00:00"
+        },
+        {
+            "name": "johnbillion/query-monitor",
+            "version": "3.11.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnbillion/query-monitor.git",
+                "reference": "46f16175627900cb7d18bebf17f4ca41c62d5c23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnbillion/query-monitor/zipball/46f16175627900cb7d18bebf17f4ca41c62d5c23",
+                "reference": "46f16175627900cb7d18bebf17f4ca41c62d5c23",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "codeception/module-asserts": "^1.0",
+                "codeception/module-db": "^1.0",
+                "codeception/module-webdriver": "^1.0",
+                "codeception/util-universalframework": "^1.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "0.7.2",
+                "lucatume/wp-browser": "^3.0.21",
+                "phpcompatibility/phpcompatibility-wp": "2.1.4",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "roots/wordpress": "*",
+                "squizlabs/php_codesniffer": "3.7.1",
+                "szepeviktor/phpstan-wordpress": "1.1.6",
+                "wp-coding-standards/wpcs": "2.3.0"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "wordpress-install-dir": "tests/wordpress"
+            },
+            "autoload": {
+                "classmap": [
+                    "classes",
+                    "data",
+                    "output"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "John Blackbourn",
+                    "homepage": "https://johnblackbourn.com/"
+                }
+            ],
+            "description": "The Developer Tools panel for WordPress.",
+            "homepage": "https://github.com/johnbillion/query-monitor/",
+            "support": {
+                "forum": "https://wordpress.org/support/plugin/query-monitor",
+                "issues": "https://github.com/johnbillion/query-monitor/issues",
+                "source": "https://github.com/johnbillion/query-monitor"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/johnbillion",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-01-03T21:14:04+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",

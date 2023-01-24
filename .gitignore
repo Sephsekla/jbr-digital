@@ -2,5 +2,6 @@
 /node_modules/
 /wordpress/
 content/mu-plugins/asset-loader/
+content/mu-plugins/query-monitor/
 content/themes/twentytwentythree/
 .DS_Store

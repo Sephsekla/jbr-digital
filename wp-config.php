@@ -22,6 +22,10 @@ if ( is_readable( './.config/production.php' ) ) {
 	require_once( './.config/local.php' );
 }
 
+if ( ! defined( 'JBR_IS_LOCAL' ) ) {
+	define( 'JBR_IS_LOCAL', false );
+}
+
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/wordpress/' );

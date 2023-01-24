@@ -16,7 +16,8 @@
 		"wp": "docker-compose run wpcli"
 	},
 	"require-dev": {
-		"humanmade/coding-standards": "^1.2"
+		"humanmade/coding-standards": "^1.2",
+		"johnbillion/query-monitor": "^3.11"
 	},
 	"config": {
 		"allow-plugins": {
@@ -44,7 +45,8 @@
 		"installer-paths": {
 			"content/mu-plugins/{$name}/": [
 				"type:wordpress-muplugin",
-				"humanmade/asset-loader"
+				"humanmade/asset-loader",
+				"johnbillion/query-monitor"
 			],
 			"content/plugins/{$name}/": [
 				"type:wordpress-plugin"
